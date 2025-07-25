@@ -1,7 +1,11 @@
-export default function AbcLayout({children}){
-return(
+export default function AbcLayout({ children }) {
+  return (
     <>
-    {children}
+      {children}
+      <ul>
+        <li>Dummy</li>
+        <li>Dummy</li>
+      </ul>
     </>
-)
+  );
 }
