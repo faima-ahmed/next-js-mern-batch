@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "start-api": "json-server --watch -p 4000 db.json",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

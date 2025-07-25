@@ -8,17 +8,9 @@ const Nav = () => {
         <li>
           <Link href="/">Home</Link>
         </li>
+
         <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/abc/product">Product</Link>
-        </li>
-        <li>
-          <Link href="/abc">ABC</Link>
-        </li>
-        <li>
-          <Link href="/post-list">PostList</Link>
+          <Link href="/add-product">Add Product</Link>
         </li>
       </ul>
     </nav>

@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Product 1",
+      "price": 500,
+      "description": "Product 1 Details",
+      "image": "https://images.pexels.com/photos/358042/pexels-photo-358042.jpeg?_gl=1*vir0jg*_ga*MjAxMjM1NTM1LjE3NDE1Mzk0MDY.*_ga_8JE65Q40S6*czE3NTI3NjE4NDYkbzEyJGcxJHQxNzUyNzYxODYzJGo0MyRsMCRoMA.."
+    },
+    {
+      "id": "2",
+      "title": "Doll",
+      "price": 225,
+      "description": "Doll Details",
+      "image": "https://images.pexels.com/photos/1194025/pexels-photo-1194025.jpeg?_gl=1*3dwwny*_ga*MjAxMjM1NTM1LjE3NDE1Mzk0MDY.*_ga_8JE65Q40S6*czE3NTI3NjE4NDYkbzEyJGcxJHQxNzUyNzYxOTAwJGo2JGwwJGgw"
+    }
+  ]
+}
