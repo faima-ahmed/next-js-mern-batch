@@ -1,9 +1,13 @@
+import Image from "next/image";
 import ProductCard from "./components/ProductCard";
 
 const Shop = async () => {
-  const res = await fetch(`http://localhost:4000/products`);
-  const products = await res.json();
+  console.log("I am being rendered");
 
+  const res = await fetch(`http://localhost:4000/products`, {
+    next: { tags: ["amaroproanojahachay"] },
+  });
+  const products = await res.json();
   return (
     <>
       <div className="page-banner">
@@ -11,6 +15,21 @@ const Shop = async () => {
           <div className="page-banner__details__title">
             <h1>Our E-commerce Website</h1>
           </div>
+        </div>
+      </div>
+
+      <div className="page-banner">
+        <div className="page-banner__details">
+          <div className="page-banner__details__title">
+            <h1>Our E-commerce Website</h1>
+          </div>
+          <Image
+            // style={{ width: "100vw", height: "100vh" }}
+            width={1920}
+            height={1080}
+            src="/test-image-7mb.jpg"
+            alt=""
+          />
         </div>
       </div>
       <div className="section">
@@ -34,4 +53,5 @@ const Shop = async () => {
     </>
   );
 };
+
 export default Shop;
