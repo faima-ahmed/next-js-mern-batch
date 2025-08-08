@@ -6,7 +6,7 @@ const connectDb = async () => {
 
     return;
   }
-  await mongoose.connect(`mongodb+srv://faimaahmeddiya:faimamongo2002db@cluster0.k2g5wii.mongodb.net/next-js-api`);
+  await mongoose.connect(`mongodb://localhost:27017/simple-api`);
   // mongoose.set("debug", true);
 };
 
