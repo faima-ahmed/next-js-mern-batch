@@ -1,26 +1,30 @@
 "use server";
 
-import { revalidateTag } from "next/cache";
-// isr -> time based
-// isr -> on demand isr
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
+import connectDb from "@/utils/db";
+import Product from "@/models/product";
 
-export const addProduct = async (formData) => {
-  console.log(formData.get("price"), "data");
-  const product = {
-    title: formData.get("title"),
-    price: Number(formData.get("price")),
-    description: formData.get("description"),
-    image: formData.get("image"),
-  };
+export async function addProduct(prevState) {
+  try {
+    await connectDb();
+    const product = {
+      title: prevState.title,
+      description: prevState.description,
+      price: Number(prevState.price),
+      category: prevState.category,
+      image: prevState.image,
+    };
+    await new Product(product).save();
+  } catch (error) {
+    console.log(error);
+    return {
+      message: "Error creating product",
+    };
+  }
 
-  await fetch(`http://localhost:4000/products`, {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify(product),
-  });
-  revalidateTag("amaroproanojahachay");
-};
+  revalidatePath("/");
+  // revalidatePath("/dashboard/admin/products");
 
-// redux ->
+  redirect("/");
+}

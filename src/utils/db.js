@@ -27,7 +27,7 @@ if (!cached) {
   cached = global.mongoose = { conn: null, promise: null };
 }
 
-const connectDb = async () => {
+export const connectDb = async () => {
   if (cached.conn) {
     return cached.conn;
   }

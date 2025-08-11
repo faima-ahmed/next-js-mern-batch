@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import connectDb from "@/utils/db";
 import Product from "@/models/product";
+import connectDb from "@/utils/db";
 
 export async function GET(req) {
   await connectDb();
   // retrieving the query params
   const { searchParams } = new URL(req.url);
-   console.log(req.url, "url");
+  console.log(req.url, "url");
 
   const page = searchParams.get("page") || {};
   console.log(page, "page");
