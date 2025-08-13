@@ -16,7 +16,6 @@ export async function addProduct(prevState) {
       image: prevState.image,
     };
     const result = await new Product(product).save();
-    console.log("Result ki ashe?", result);
   } catch (error) {
     console.log(error);
     return {
