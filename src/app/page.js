@@ -1,5 +1,6 @@
+import Pagination from "./components/Pagination";
 import ProductCard from "./components/ProductCard";
-import Pagination from "@/app/components/Pagination";
+
 
 const getProducts = async (searchParams) => {
   const searchQuery = new URLSearchParams({
@@ -20,6 +21,7 @@ const getProducts = async (searchParams) => {
     totalPages: data?.totalPages,
   };
 };
+
 export default async function Home({ searchParams }) {
   const params = await searchParams;
   console.log(params, "srh");

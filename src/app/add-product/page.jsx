@@ -36,8 +36,8 @@ const AddProductForm = () => {
       >
         <p>Title:</p>
         <input
-          // value={product.title}
-          // onChange={handleChange}
+          value={product.title}
+          onChange={handleChange}
           name="title"
           style={{ display: "block", width: "80%" }}
           required
@@ -46,8 +46,8 @@ const AddProductForm = () => {
         <p>Price:</p>
 
         <input
-          // value={product.price}
-          // onChange={handleChange}
+          value={product.price}
+          onChange={handleChange}
           name="price"
           style={{ display: "block", width: "80%" }}
           type="number"
@@ -57,8 +57,8 @@ const AddProductForm = () => {
 
         <p>Description:</p>
         <input
-          // value={product.description}
-          // onChange={handleChange}
+          value={product.description}
+          onChange={handleChange}
           name="description"
           style={{ display: "block", width: "80%" }}
           type="text"
@@ -69,8 +69,8 @@ const AddProductForm = () => {
 
         <input
           name="image"
-          // value={product.image}
-          // onChange={handleChange}
+          value={product.image}
+          onChange={handleChange}
           style={{ display: "block", width: "80%" }}
           type="text"
           required

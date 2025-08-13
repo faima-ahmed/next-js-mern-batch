@@ -22,6 +22,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.nyip.edu",
       },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com"
+      }
       
     ],
   },
