@@ -155,7 +155,7 @@ const AddProductForm = () => {
                     Category
                   </label>
                   <select
-                    id="category"
+                    id=""
                     name="category"
                     onChange={handleChange}
                     value={product.category}
@@ -171,7 +171,7 @@ const AddProductForm = () => {
 
                 <div>
                   <label className="text-sm font-medium text-gray-700">
-                    Image
+                    Image URL:
                   </label>
                   {product.image && (
                     <img

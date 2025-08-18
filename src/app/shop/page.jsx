@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 import ProductFilter from "@/app/components/ProductFilter";
 import Pagination from "@/app/components/Pagination";
 import ProductCard from "@/app/components/ProductCard";
-import { getBaseUrl } from "@/utils/api";
+// import { getBaseUrl } from "@/utils/api";
 
 async function getProductsForShop(upd) {
   const searchQuery = new URLSearchParams({
@@ -16,11 +16,11 @@ async function getProductsForShop(upd) {
     category: upd?.category || "",
   }).toString();
 
-  const baseUrl = getBaseUrl();
+  // const baseUrl = getBaseUrl();
 
   try {
     const response = await fetch(
-      `${baseUrl}/api/product/filters?${searchQuery}`,
+      `http://localhost:3000/api/product/filters?${searchQuery}`,
       {
         method: "GET",
         cache: "no-store",
